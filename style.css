@@ -13,7 +13,7 @@ scroll-behavior:smooth;
 
 body{
 
-background:#11162d;
+background:  #081C15;
 color:white;
 
 }
@@ -34,7 +34,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-background:#11162d;
+background: #081C15;
 
 z-index:100;
 
@@ -65,7 +65,7 @@ transition:.3s;
 
 nav a:hover{
 
-color:#00bfff;
+color:#2ECC71;
 
 }
 
@@ -160,11 +160,11 @@ align-items:center;
 width:45px;
 height:45px;
 
-border:2px solid #00bfff;
+border:2px solid #2ECC71;
 
 border-radius:50%;
 
-color:#00bfff;
+color:#2ECC71;
 
 font-size:22px;
 
@@ -178,11 +178,14 @@ transition:.4s;
 
 .social a:hover{
 
-background:#00bfff;
+background:#081C15;
 
 color:white;
 
-box-shadow:0 0 20px #00bfff;
+box-shadow:
+0 0 15px #2ECC71,
+0 0 35px #2ECC71,
+0 0 60px rgba(46,204,113,.5);
 
 }
 
@@ -199,7 +202,7 @@ margin-top:30px;
 
 padding:12px 35px;
 
-background:#00bfff;
+background:linear-gradient(135deg,#2ECC71,#1B5E20);
 
 border-radius:30px;
 
@@ -228,20 +231,11 @@ justify-content:center;
 
 .circle{
 
-width:350px;
+background:linear-gradient(135deg,#2ECC71,#FFD700);
 
-height:350px;
-
-border-radius:50%;
-
-background:#00bfff;
-
-padding:10px;
-
-animation:float 3s infinite ease-in-out;
-
-box-shadow:0 0 40px #00bfff;
-
+box-shadow:
+0 0 25px #2ECC71,
+0 0 50px rgba(46,204,113,.5);
 }
 
 
@@ -284,7 +278,7 @@ transform:translateY(-20px);
 
 padding:80px 10%;
 
-background:#171d38;
+background:#081C15;
 
 text-align:center;
 
@@ -301,10 +295,8 @@ font-size:45px;
 }
 
 
-span{
-
-color:#00bfff;
-
+span {
+    color: #FFD700;
 }
 
 
@@ -360,7 +352,7 @@ margin-top:40px;
 .skill-box {
     width: 220px;
     height: 150px;
-    background: #232b54;
+    background: #081C15;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -371,12 +363,12 @@ margin-top:40px;
 
 .skill-box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px #00bfff;
+    box-shadow: 0 0 20px #2ECC71;
 }
 
 .skill-box i {
     font-size: 50px;
-    color: #00bfff;
+    color: #2ECC71;
     margin-bottom: 15px;
 }
 
@@ -387,7 +379,7 @@ width:220px;
 
 height:150px;
 
-background:#1c2445;
+background:#123524;
 
 border-radius:15px;
 
@@ -409,7 +401,7 @@ transition:.4s;
 
 font-size:45px;
 
-color:#00bfff;
+color:#2ECC71;
 
 }
 
@@ -419,7 +411,7 @@ color:#00bfff;
 
 transform:translateY(-10px);
 
-box-shadow:0 0 20px #00bfff;
+box-shadow:0 0 20px #2ECC71;
 
 }
 /* Certificate Page */
@@ -431,7 +423,7 @@ min-height:100vh;
 
 padding:120px 10%;
 
-background:#11162d;
+background:#0F2D24;
 
 text-align:center;
 
@@ -479,7 +471,7 @@ min-height:300px;
 padding:30px;
 
 
-background:#1c2445;
+background:#081C15;
 
 border-radius:20px;
 
@@ -497,7 +489,7 @@ transition:.4s;
 transform:translateY(-15px);
 
 
-box-shadow:0 0 25px #00bfff;
+box-shadow:0 0 25px #2ECC71;
 
 
 }
@@ -509,7 +501,7 @@ box-shadow:0 0 25px #00bfff;
 
 font-size:50px;
 
-color:#00bfff;
+color:#2ECC71;
 
 margin-bottom:20px;
 
@@ -555,7 +547,7 @@ margin-top:20px;
 padding:10px 25px;
 
 
-background:#00bfff;
+background:#081C15;
 
 
 color:white;
@@ -583,7 +575,7 @@ padding:80px 10%;
 
 text-align:center;
 
-background:#171d38;
+background:#081C15;
 
 }
 
@@ -617,7 +609,7 @@ margin:15px;
 
 .contact-info i{
 
-color:#00bfff;
+color:#2ECC71;
 
 font-size:25px;
 
@@ -628,7 +620,7 @@ margin-right:15px;
 
 .contact-info a{
 
-color:#00bfff;
+color:#2ECC71;
 
 text-decoration:none;
 
@@ -728,5 +720,48 @@ font-size:45px;
 
 
 .close:hover{
-    color:#00bfff;
+    color:#2ECC71;
+}
+/* Resume Popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background: #fff;
+    width: 80%;
+    max-width: 900px;
+    height: 90%;
+    margin: 30px auto;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-content iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.close:hover {
+    color: red;
 }
