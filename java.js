@@ -4,28 +4,20 @@ let index = 0;
 
 let typing = document.getElementById("typing");
 
+function type() {
 
-function type(){
+    if (index < text.length) {
 
-if(index < text.length){
+        typing.innerHTML += text.charAt(index);
 
-typing.innerHTML += text.charAt(index);
+        index++;
 
-index++;
+        setTimeout(type, 100);
 
-setTimeout(type,100);
-
+    }
 }
 
-else{
-
-setTimeout(remove,1500);
-
-}
-
-}
-
-
+type();
 
 function remove(){
 
