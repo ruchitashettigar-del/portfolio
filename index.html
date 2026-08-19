@@ -337,6 +337,52 @@ window.onclick = function(event) {
     }
 }
 </script>
-<script src="java.js"></script>
+    
+
+    <script src="java.js"></script>
+
+<script>
+const typingElement = document.getElementById("typing");
+
+const typingText = "Computer Science Student";
+
+let typingIndex = 0;
+let deletingText = false;
+
+function typingAnimation() {
+
+    if (!deletingText) {
+
+        typingElement.textContent =
+            typingText.substring(0, typingIndex + 1);
+
+        typingIndex++;
+
+        if (typingIndex === typingText.length) {
+            deletingText = true;
+            setTimeout(typingAnimation, 1500);
+            return;
+        }
+
+    } else {
+
+        typingElement.textContent =
+            typingText.substring(0, typingIndex - 1);
+
+        typingIndex--;
+
+        if (typingIndex === 0) {
+            deletingText = false;
+        }
+    }
+
+    setTimeout(typingAnimation, deletingText ? 70 : 100);
+}
+
+typingAnimation();
+</script>
+
+</body>
+</html>
 </body>
 </html>
