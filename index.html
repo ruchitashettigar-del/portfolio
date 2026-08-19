@@ -44,74 +44,60 @@ Portfolio.
 
 <section class="home" id="home">
 
+    <div class="home-content">
 
-<div class="home-content">
+        <h3>Hi, It's Me</h3>
 
-<h3>Hi, It's Me</h3>
+        <h1>Ruchita</h1>
 
-<h1>Ruchita</h1>
+        <h2>
+            I'm a Computer Science Student
+            <span id="typing"></span>
+        </h2>
 
+        <p>
+            I am a Computer Science student passionate about technology,
+            programming, and web development. I enjoy creating modern,
+            responsive websites and learning new technologies to improve
+            my skills.
+        </p>
 
-<h2>
-I'm a Computer Science Student
-<span id="typing"></span>
-</h2>
+        <div class="social">
 
+            <a href="https://github.com/ruchitashettigar-del" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
 
-<p>
-I am a Computer Science student passionate about technology,
-programming, and web development. I enjoy creating modern,
-responsive websites and learning new technologies to improve
-my skills.
-</p>
+            <a href="https://www.linkedin.com/in/ruchita-shettigar-754b37427/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
 
+        </div>
 
-
-<div class="social">
-
-<a href="https://github.com/ruchitashettigar-del" target="_blank">
-<i class="fa-brands fa-github"></i>
-</a>
-
-
-<a href="https://www.linkedin.com/in/ruchita-shettigar-754b37427/." target="_blank">
-<i class="fa-brands fa-linkedin"></i>
-</a>
-
-</div>
+        <a href="#" class="btn" onclick="openResume()">View Resume</a>
 
 
+        <!-- Resume Popup -->
 
-<a href="#" class="btn" onclick="openResume()">View Resume</a>
+        <div id="resumeModal" class="modal">
 
-<!-- Resume Popup -->
-<div id="resumeModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeResume()">&times;</span>
+            <div class="modal-content">
 
-        <iframe src="resume.pdf" width="100%" height="600px"></iframe>
+                <span class="close" onclick="closeResume()">&times;</span>
+
+                <iframe
+                    src="resume.pdf"
+                    width="100%"
+                    height="600px">
+                </iframe>
+
+            </div>
+
+        </div>
+
     </div>
-</div>
-</div>
-
-
-
-
-<div class="profile">
-
-<div class="circle">
-
-<img src="profile.jpg">
-
-</div>
-
-</div>
-
 
 </section>
-
-
-
 
 
 <!-- About Section -->
