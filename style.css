@@ -40,7 +40,20 @@ z-index:100;
 
 }
 
+#typing {
+    display: inline-block;
+    min-width: 10px;
+    border-right: 3px solid;
+    padding-right: 5px;
+    animation: cursor 0.7s infinite;
+}
 
+/* Blinking cursor */
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
 
 .logo{
 
