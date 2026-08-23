@@ -13,7 +13,7 @@ scroll-behavior:smooth;
 
 body{
 
-background:  transparent;
+background:  #081c15;
 color:white;
 
 }
@@ -97,6 +97,7 @@ color:#2ECC71;
     padding: 100px 10%;
 
     text-align: center;
+    background:transparent;
 }
 
 
@@ -912,8 +913,7 @@ font-size:45px;
 .close:hover {
     color: red;
 }
-
-/* ===== Animated Background ===== */
+/* ===== Animated Green Background ===== */
 
 body {
     background: #081c15;
@@ -921,35 +921,51 @@ body {
     position: relative;
 }
 
-/* Moving glowing background */
+/* Glowing lights */
 body::before,
 body::after {
     content: "";
     position: fixed;
+
     width: 350px;
     height: 350px;
+
     border-radius: 50%;
+
     pointer-events: none;
-    z-index: -1;
-    filter: blur(80px);
-    opacity: 0.25;
+
+    filter: blur(90px);
+
+    opacity: 0.20;
+
+    z-index: 0;
 }
 
+/* First green glow */
 body::before {
     background: #2ecc71;
+
     top: -100px;
     left: -100px;
+
     animation: glowMove1 10s ease-in-out infinite alternate;
 }
 
+/* Second green glow */
 body::after {
     background: #00ff99;
+
     right: -100px;
     bottom: -100px;
+
     animation: glowMove2 12s ease-in-out infinite alternate;
 }
 
+
+/* ===== Animation 1 ===== */
+
 @keyframes glowMove1 {
+
     0% {
         transform: translate(0, 0);
     }
@@ -961,9 +977,14 @@ body::after {
     100% {
         transform: translate(100px, 450px);
     }
+
 }
 
+
+/* ===== Animation 2 ===== */
+
 @keyframes glowMove2 {
+
     0% {
         transform: translate(0, 0);
     }
@@ -975,4 +996,16 @@ body::after {
     100% {
         transform: translate(-100px, -450px);
     }
+
 }
+
+
+/* Keep your website content above the animation */
+
+header,
+main,
+section {
+    position: relative;
+    z-index: 1;
+}
+
