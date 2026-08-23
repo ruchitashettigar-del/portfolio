@@ -157,6 +157,7 @@ color:#2ECC71;
 }
 
 
+
 .social a {
     display: flex;
     justify-content: center;
@@ -165,29 +166,20 @@ color:#2ECC71;
     width: 55px;
     height: 55px;
 
-    border: 2px solid #00bfff;
+    border: 2px solid #ffd700;
     border-radius: 50%;
 
-    color: #00bfff;
-
-    font-size: 28px;
-
+    color: #ffd700;
     text-decoration: none;
 
     transition: 0.3s ease;
 }
 
-
 .social a:hover {
-    background-color: #00bfff;
-
-    color: #fff;
-
-    transform: translateY(-5px);
-
-    box-shadow: 0 0 15px #00bfff;
+    color: white;
+    border-color: white;
+    transform: scale(1.1);
 }
-
 
 /* ================= RESUME BUTTON ================= */
 
