@@ -13,7 +13,7 @@ scroll-behavior:smooth;
 
 body{
 
-background:  #081C15;
+background:  transparent;
 color:white;
 
 }
@@ -423,7 +423,7 @@ transform:translateY(-20px);
 
 padding:80px 10%;
 
-background:#081C15;
+background:transparent;
 
 text-align:center;
 
@@ -469,6 +469,7 @@ color:#ddd;
 padding:80px 10%;
 
 text-align:center;
+background:transparent;
 
 }
 
@@ -577,6 +578,7 @@ text-align:center;
     max-width: 1000px;   /* Medium page width */
     margin: 0 auto;      /* Centers the section */
     padding: 80px 20px;
+    background:transparent;
 }
 
 
@@ -720,7 +722,7 @@ padding:80px 10%;
 
 text-align:center;
 
-background:#081C15;
+background:transparent;
 
 }
 
@@ -911,3 +913,66 @@ font-size:45px;
     color: red;
 }
 
+/* ===== Animated Background ===== */
+
+body {
+    background: #081c15;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Moving glowing background */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(80px);
+    opacity: 0.25;
+}
+
+body::before {
+    background: #2ecc71;
+    top: -100px;
+    left: -100px;
+    animation: glowMove1 10s ease-in-out infinite alternate;
+}
+
+body::after {
+    background: #00ff99;
+    right: -100px;
+    bottom: -100px;
+    animation: glowMove2 12s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(250px, 200px);
+    }
+
+    100% {
+        transform: translate(100px, 450px);
+    }
+}
+
+@keyframes glowMove2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-250px, -200px);
+    }
+
+    100% {
+        transform: translate(-100px, -450px);
+    }
+}
