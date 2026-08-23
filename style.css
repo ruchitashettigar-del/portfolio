@@ -61,8 +61,16 @@ font-size:28px;
 font-weight:700;
 
 }
+/* Home page social icons only */
+.home .social-icons a {
+  color: #ffd700;
+  border: 2px solid #ffd700;
+}
 
-
+.home .social-icons a:hover {
+  color: white;
+  border-color: white;
+}
 
 nav a{
 
